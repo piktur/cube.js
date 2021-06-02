@@ -49,20 +49,21 @@ CUBEJS_API_SECRET=secret
 The table below shows which environment variables are used for different
 databases:
 
-| Database                                               | Credentials                                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PostgreSQL, MySQL, AWS Redshift, Hive/SparkSQL, Oracle | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`                                                                                                                                                                                                                                                             |
-| MS SQL                                                 | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_DOMAIN`                                                                                                                                                                                                                                         |
-| ClickHouse                                             | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SSL`, `CUBEJS_DB_CLICKHOUSE_READONLY`                                                                                                                                                                                                           |
-| AWS Athena                                             | `CUBEJS_AWS_KEY`, `CUBEJS_AWS_SECRET`, `CUBEJS_AWS_REGION`, `CUBEJS_AWS_S3_OUTPUT_LOCATION`                                                                                                                                                                                                                                                          |
-| Google BigQuery                                        | `CUBEJS_DB_BQ_PROJECT_ID`, `CUBEJS_DB_BQ_KEY_FILE or CUBEJS_DB_BQ_CREDENTIALS`, `CUBEJS_DB_BQ_LOCATION`, `CUBEJS_DB_BQ_EXPORT_BUCKET`                                                                                                                                                                                                                |
-| MongoDB                                                | `CUBEJS_DB_HOST`, `CUBEJS_DB_NAME`, `CUBEJS_DB_PORT`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SSL`, `CUBEJS_DB_SSL_CA`, `CUBEJS_DB_SSL_CERT`, `CUBEJS_DB_SSL_CIPHERS`, `CUBEJS_DB_SSL_PASSPHRASE`                                                                                                                                             |
-| Snowflake                                              | `CUBEJS_DB_SNOWFLAKE_ACCOUNT`, `CUBEJS_DB_SNOWFLAKE_REGION`, `CUBEJS_DB_SNOWFLAKE_WAREHOUSE`, `CUBEJS_DB_SNOWFLAKE_ROLE`, `CUBEJS_DB_SNOWFLAKE_CLIENT_SESSION_KEEP_ALIVE`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SNOWFLAKE_AUTHENTICATOR`, `CUBEJS_DB_SNOWFLAKE_PRIVATE_KEY_PATH`, `CUBEJS_DB_SNOWFLAKE_PRIVATE_KEY_PASS` |
-| Presto                                                 | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_CATALOG`, `CUBEJS_DB_SCHEMA`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`                                                                                                                                                                                                                                      |
-| Druid                                                  | `CUBEJS_DB_URL`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SSL`                                                                                                                                                                                                                                                                                 |
-| SQLite                                                 | `CUBEJS_DB_NAME`                                                                                                                                                                                                                                                                                                                                     |
-| Databricks                                             | `CUBEJS_DB_NAME`, `CUBEJS_DB_DATABRICKS_URL`                                                                                                                                                                                                                                                                                                         |
-| Elasticsearch                                          | `CUBEJS_DB_URL`, `CUBEJS_DB_ELASTIC_QUERY_FORMAT`,`CUBEJS_DB_ELASTIC_OPENDISTRO` ,`CUBEJS_DB_ELASTIC_APIKEY_ID`,`CUBEJS_DB_ELASTIC_APIKEY_KEY`                                                                                                                                                                                                       |
+| Database                                 | Credentials                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PostgreSQL, MySQL, Hive/SparkSQL, Oracle | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| AWS Redshift                             | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_EXPORT_BUCKET`, `CUBEJS_DB_EXPORT_BUCKET_TYPE`, `CUBEJS_DB_EXPORT_BUCKET_AWS_KEY`, `CUBEJS_DB_EXPORT_BUCKET_AWS_SECRET`, `CUBEJS_DB_EXPORT_BUCKET_AWS_REGION`                                                                                                                                                                                                                                                                                                                                 |
+| MS SQL                                   | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_DOMAIN`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ClickHouse                               | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SSL`, `CUBEJS_DB_CLICKHOUSE_READONLY`                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| AWS Athena                               | `CUBEJS_AWS_KEY`, `CUBEJS_AWS_SECRET`, `CUBEJS_AWS_REGION`, `CUBEJS_AWS_S3_OUTPUT_LOCATION`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Google BigQuery                          | `CUBEJS_DB_BQ_PROJECT_ID`, `CUBEJS_DB_BQ_KEY_FILE or CUBEJS_DB_BQ_CREDENTIALS`, `CUBEJS_DB_BQ_LOCATION`, `CUBEJS_DB_EXPORT_BUCKET`, `CUBEJS_DB_EXPORT_BUCKET_TYPE`                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| MongoDB                                  | `CUBEJS_DB_HOST`, `CUBEJS_DB_NAME`, `CUBEJS_DB_PORT`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SSL`, `CUBEJS_DB_SSL_CA`, `CUBEJS_DB_SSL_CERT`, `CUBEJS_DB_SSL_CIPHERS`, `CUBEJS_DB_SSL_PASSPHRASE`                                                                                                                                                                                                                                                                                                                                                                                           |
+| Snowflake                                | `CUBEJS_DB_SNOWFLAKE_ACCOUNT`, `CUBEJS_DB_SNOWFLAKE_REGION`, `CUBEJS_DB_SNOWFLAKE_WAREHOUSE`, `CUBEJS_DB_SNOWFLAKE_ROLE`, `CUBEJS_DB_SNOWFLAKE_CLIENT_SESSION_KEEP_ALIVE`, `CUBEJS_DB_NAME`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SNOWFLAKE_AUTHENTICATOR`, `CUBEJS_DB_SNOWFLAKE_PRIVATE_KEY_PATH`, `CUBEJS_DB_SNOWFLAKE_PRIVATE_KEY_PASS`, `CUBEJS_DB_EXPORT_BUCKET`, `CUBEJS_DB_EXPORT_BUCKET_TYPE`, `CUBEJS_DB_EXPORT_INTEGRATION`, `CUBEJS_DB_EXPORT_BUCKET_AWS_KEY`, `CUBEJS_DB_EXPORT_BUCKET_AWS_SECRET`, `CUBEJS_DB_EXPORT_BUCKET_AWS_REGION`, `CUBEJS_DB_EXPORT_GCS_CREDENTIALS` |
+| Presto                                   | `CUBEJS_DB_HOST`, `CUBEJS_DB_PORT`, `CUBEJS_DB_CATALOG`, `CUBEJS_DB_SCHEMA`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Druid                                    | `CUBEJS_DB_URL`, `CUBEJS_DB_USER`, `CUBEJS_DB_PASS`, `CUBEJS_DB_SSL`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| SQLite                                   | `CUBEJS_DB_NAME`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Databricks                               | `CUBEJS_DB_NAME`, `CUBEJS_DB_DATABRICKS_URL`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Elasticsearch                            | `CUBEJS_DB_URL`, `CUBEJS_DB_ELASTIC_QUERY_FORMAT`,`CUBEJS_DB_ELASTIC_OPENDISTRO` ,`CUBEJS_DB_ELASTIC_APIKEY_ID`,`CUBEJS_DB_ELASTIC_APIKEY_KEY`                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## Multiple Databases
 
@@ -195,18 +196,25 @@ You can learn more about acquiring Google BigQuery credentials
 [here][link-bigquery-getting-started] and [here][link-bigquery-credentials].
 
 You can set the dataset location using the `CUBEJS_DB_BQ_LOCATION` environment
-variable.
+variable. All supported regions [can be found
+here][link-bigquery-regional-locations].
 
 ```dotenv
 CUBEJS_DB_BQ_LOCATION=us-central1
 ```
 
-You can find more supported regions [here][link-bigquery-regional-locations].
+#### Configuring an export bucket
 
-If your pre-aggregations dataset is too big to fit in memory, we **strongly**
-recommend configuring `CUBEJS_DB_BQ_EXPORT_BUCKET`. This will allow Cube.js to
-materialize results on an "export" bucket which are then loaded into BigQuery,
-providing better performance.
+<!-- prettier-ignore-start -->
+[[warning |]]
+| BigQuery only supports using Google Cloud Storage for export buckets.
+<!-- prettier-ignore-end -->
+
+##### Google Cloud Storage
+
+For [improved pre-aggregation performance with large
+datasets][ref-caching-large-preaggs], enable export bucket functionality by
+configuring Cube.js with the following environment variables:
 
 <!-- prettier-ignore-start -->
 [[info |]]
@@ -216,7 +224,8 @@ providing better performance.
 <!-- prettier-ignore-end -->
 
 ```dotenv
-CUBEJS_DB_BQ_EXPORT_BUCKET=export_data_58148478376
+CUBEJS_DB_EXPORT_BUCKET=export_data_58148478376
+CUBEJS_DB_EXPORT_BUCKET_TYPE=gcp
 ```
 
 ### MSSQL
@@ -279,6 +288,82 @@ To connect to a Elasticsearch database, use `CUBEJS_DB_URL` with the username
 and password embedded in the URL, if required. If you're not using Elastic
 Cloud, you **must** specify `CUBEJS_DB_ELASTIC_QUERY_FORMAT`.
 
+### AWS Redshift
+
+#### Configuring an export bucket
+
+<!-- prettier-ignore-start -->
+[[warning |]]
+| AWS Redshift only supports using AWS S3 for export buckets.
+<!-- prettier-ignore-end -->
+
+##### AWS S3
+
+For [improved pre-aggregation performance with large
+datasets][ref-caching-large-preaggs], enable export bucket functionality by
+configuring Cube.js with the following environment variables:
+
+<!-- prettier-ignore-start -->
+[[info |]]
+| Ensure the AWS credentials are correctly configured in IAM to allow reads and
+| writes to the export bucket.
+<!-- prettier-ignore-end -->
+
+```dotenv
+CUBEJS_DB_EXPORT_BUCKET=my.bucket.on.s3
+CUBEJS_DB_EXPORT_BUCKET_AWS_KEY=<AWS_KEY>
+CUBEJS_DB_EXPORT_BUCKET_AWS_SECRET=<AWS_SECRET>
+CUBEJS_DB_EXPORT_BUCKET_AWS_REGION=<AWS_REGION>
+```
+
+### Snowflake
+
+#### Configuring an export bucket
+
+Snowflake supports using both AWS S3 and Google Cloud Storage for export bucket
+functionality.
+
+##### AWS S3
+
+<!-- prettier-ignore-start -->
+[[info |]]
+| Ensure the AWS credentials are correctly configured in IAM to allow reads and
+| writes to the export bucket.
+<!-- prettier-ignore-end -->
+
+```dotenv
+CUBEJS_DB_EXPORT_BUCKET=my.bucket.on.s3
+CUBEJS_DB_EXPORT_BUCKET_AWS_KEY=<AWS_KEY>
+CUBEJS_DB_EXPORT_BUCKET_AWS_SECRET=<AWS_SECRET>
+CUBEJS_DB_EXPORT_BUCKET_AWS_REGION=<AWS_REGION>
+```
+
+##### Google Cloud Storage
+
+Before configuring Cube.js, an integration must be created in Snowflake:
+
+```sql
+CREATE OR REPLACE STORAGE INTEGRATION gcs_int
+  type = external_stage
+  storage_provider = gcs
+  enabled = true
+  storage_allowed_locations = ('gcs://snowflake-export-bucket/*', 'gcs://snowflake-export-bucket/');
+GRANT USAGE ON INTEGRATION gcs_int TO ROLE SYSADMIN;
+```
+
+<!-- prettier-ignore-start -->
+[[info |]]
+| Ensure the AWS credentials are correctly configured in IAM to allow reads and
+| writes to the export bucket.
+<!-- prettier-ignore-end -->
+
+```dotenv
+CUBEJS_DB_EXPORT_BUCKET=snowflake-export-bucket
+CUBEJS_DB_EXPORT_BUCKET_TYPE=gcp
+CUBEJS_DB_EXPORT_INTEGRATION=gcs_int
+CUBEJS_DB_EXPORT_GCS_CREDENTIALS=<BASE64_ENCODED_SERVICE_CREDENTIALS_JSON
+```
+
 [link-java-guide]:
   https://github.com/cube-js/cube.js/blob/master/packages/cubejs-jdbc-driver/README.md#java-installation
 [link-cubejs-driver-guide]:
@@ -305,3 +390,4 @@ Cloud, you **must** specify `CUBEJS_DB_ELASTIC_QUERY_FORMAT`.
 [ref-env-var]: /reference/environment-variables#database-connection
 [link-bigquery-regional-locations]:
   https://cloud.google.com/bigquery/docs/locations#regional-locations
+[ref-caching-large-preaggs]: /using-pre-aggregations#large-pre-aggregations
